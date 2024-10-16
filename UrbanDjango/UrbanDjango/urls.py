@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from task3.views import main,shop,shopping_cart
+from task4.views import main,shop,shopping_cart
 
 
 
