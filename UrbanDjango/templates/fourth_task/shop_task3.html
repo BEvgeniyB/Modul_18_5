@@ -1,32 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{Title}}</title>
-    <style>
-        .b1{background:navy;color:white;}
-        .b2{background:yellow;color:red;}
-    </style>
-</head>
-<body>
-    <h1 align="left">ИГРЫ</h1>
-    <br>
-    {% include 'menu.html'%}
-    <br>
+{% extends "menu.html" %}
 
+{% block pagename  %}
+     <h1>ИГРЫ</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super}}
+{% endblock %}
+
+{% block content %}
+    <br>
         <ul >
             {% for t in list %}
-            <li > {{t}} <button class="b1" type="submit"> Купить </button></li>
+            <li > <form> {{t}}  <button formaction="/cart" class="b1" type="submit"> Купить  </button></form></li>
             <br>
             {% endfor %}
         </ul>
     <br>
     <br>
+{% endblock %}
 
 
-    <form action="/main">
-        <button class="b2">Возврат на главную страницу</button>
-    </form>
-
-</body>
-</html>

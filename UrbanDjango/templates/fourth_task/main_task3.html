@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{Title}}</title>
-</head>
-<body>
-    <h1>Главная страница</h1>
-    <br>
-    <br>
-        {% include 'menu.html'%}
-</body>
-</html>
+{% extends "menu.html" %}
+
+{% block cellar %}
+
+{% endblock %}
+
+{% block content %}
+    <p class="b3"> Перейдите в магазин что бы купить товар</p>
+{% endblock %}

@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{Title}}</title>
-    <style>
-        .b2{background:yellow;color:red;}
-    </style>
-</head>
+{% extends "menu.html" %}
+
+{% block pagename  %}
+     <h1>Корзина</h1>
+{% endblock %}
+
+{% block content %}
+    <p>
+        <h4> Извините сайт не работает </h4>
+    </p>
+{% endblock %}
 <body>
      <h1 align="left">Корзина</h1>
      <br>
@@ -14,7 +16,7 @@
      <br>
      <h4> Извините сайт не работает </h4>
     <form action="/main">
-        <button class="b2"> Главная страница </button>
+        <button  class="b2"> Главная страница </button>
     </form>
 </body>
 </html>
